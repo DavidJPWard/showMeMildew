@@ -18,7 +18,7 @@ def performance_metric_body():
 
     if st.checkbox("Model History"):
         st.write('### Model History')
-        col1, col2 = st.columns(2)
+        col1, col2 = st.beta_columns(2)
         with col1:
             model_acc = plt.imread(f'{output_path}model_training_accuracy.png')
             st.image(model_acc, caption="Model Training Accuracy")

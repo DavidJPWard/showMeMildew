@@ -1,5 +1,5 @@
 numpy
-pandas==2.0.2.
+pandas==2.0.2.*
 matplotlib
 seaborn
 plotly

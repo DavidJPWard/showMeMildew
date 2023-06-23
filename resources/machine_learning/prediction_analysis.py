@@ -18,9 +18,11 @@ def plot_prediction_probabilities(prediction_prob, prediction_class):
         columns=['Probability']
     )
     probability_per_classification.loc[prediction_class] = prediction_prob
+
     for x in probability_per_classification.index.to_list():
         if x not in prediction_class:
             probability_per_classification.loc[x] = 1 - prediction_prob
+            
     probability_per_classification = probability_per_classification.round(3)
     probability_per_classification['Diagnostic'] = probability_per_classification.index
 
